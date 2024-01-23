@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile page</title>
+    <style>
+        .container {
+            font-family: Arial, sans-serif;
+            background-color: #f5f8fa;
+            color: #14171a;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #1da1f2;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+
+        .profile-info h3,
+        .profile-info h4 {
+            color: #14171a;
+            margin-bottom: 10px;
+        }
+
+        .profile-info p {
+            text-align: justify;
+            background-color: #fff;
+            border: 1px solid #e1e8ed;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="profile-info">
+            <h3>Username: {{ user.username }}</h3>
+            <h4>Email: {{ user.email }}</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio tenetur enim doloremque quasi
+                non sit, animi odit dolorum aliquam cupiditate dignissimos illo laudantium, ullam facilis eaque nesciunt
+                praesentium ipsum, delectus quibusdam porro harum temporibus vero. Dolorum unde ipsa debitis repellendus
+                neque.
+            </p>
+        </div>
+        <a href="{% url 'logout' %}">Log out</a>
+    </div>
+</body>
+
+</html>
